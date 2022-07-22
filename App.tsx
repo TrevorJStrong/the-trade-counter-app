@@ -6,7 +6,7 @@ import * as SplashScreen from 'expo-splash-screen';
 import * as Font from 'expo-font';
 import { SafeAreaProvider } from "react-native-safe-area-context";
 
-// import useFonts from "./src/utils/hooks/useFonts";
+import { useFonts } from "./src/utils/hooks/useFonts";
 
 export default function App() {
   const [appIsReady, setAppIsReady] = useState(false);
@@ -17,9 +17,7 @@ export default function App() {
         // Keep the splash screen visible while we fetch resources
         await SplashScreen.preventAutoHideAsync();
         // Pre-load fonts, make any API calls you need to do here
-        await Font.loadAsync({
-          montserrat: require('./assets/fonts/Montserrat-Light.ttf')
-        });
+        await useFonts();
         // Artificially delay for two seconds to simulate a slow loading
         // experience. Please remove this if you copy and paste the code!
         // await new Promise(resolve => setTimeout(resolve, 2000));
