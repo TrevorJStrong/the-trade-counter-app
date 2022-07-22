@@ -1,0 +1,340 @@
+{
+    "stores": [
+        {
+            "id": 1,
+            "name": "Screw Fix",
+            "imageURL": "../assets/logos/screw_fix.png",
+            "distance": "3.6",
+            "unit_measure": "miles",
+            "type": "Hardware - Building Materials",
+            "rating": 4,
+            "has_rated": null,
+            "address": {
+                "line_1": "Gower Street",
+                "line_2": "Wigan",
+                "county": "Greater Manchester",
+                "postcode": "WN5 9AD",
+                "coordinates": {
+                    "longitude": "-2.650060",
+                    "latitude": "53.540030"
+                },
+                "delivery": {
+                    "delivery_start": "30",
+                    "delivery_end": "50",
+                    "delivery_fee": 2.99
+                },
+            },
+            // property be fetched from a seperate endpoint
+            "categories": [
+                {
+                    "id": 1,
+                    "name": "Central Heating",
+                    "sub_categories": [
+                        {
+                            "id": 1,
+                            "name": "Taps & Sinks"
+                        },
+                        {
+                            "id": 2,
+                            "name": "Electrical Heating"
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Radiators",
+                    "sub_categories": [
+                        {
+                            "id": 1,
+                            "name": "Horizontal Radiators"
+                        },
+                        {
+                            "id": 2,
+                            "name": "Column Radiators"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "B&Q",
+            "imageURL": "b-q-logo.png",
+            "distance": "3.6",
+            "unit_measure": "miles",
+            "type": "Hardware - Building Materials",
+            "rating": 5,
+            "has_rated": null,
+            "address": {
+                "line_1": "Gower Street",
+                "line_2": "Wigan",
+                "county": "Greater Manchester",
+                "postcode": "WN5 9AD",
+                "coordinates": {
+                    "longitude": "-2.650060",
+                    "latitude": "53.540030"
+                },
+                "delivery": {
+                    "delivery_start": "30",
+                    "delivery_end": "50",
+                    "delivery_fee": 2.99
+                },
+            },
+            // property be fetched from a seperate endpoint
+            "categories": [
+                {
+                    "id": 1,
+                    "name": "Central Heating",
+                    "sub_categories": [
+                        {
+                            "id": 1,
+                            "name": "Taps & Sinks"
+                        },
+                        {
+                            "id": 2,
+                            "name": "Electrical Heating"
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Radiators",
+                    "sub_categories": [
+                        {
+                            "id": 1,
+                            "name": "Horizontal Radiators"
+                        },
+                        {
+                            "id": 2,
+                            "name": "Column Radiators"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "ToolStation",
+            "imageURL": "toolstation-logo.png",
+            "distance": "3.6",
+            "unit_measure": "miles",
+            "type": "Hardware - Building Materials",
+            "rating": 3,
+            "has_rated": null,
+            "address": {
+                "line_1": "Gower Street",
+                "line_2": "Wigan",
+                "county": "Greater Manchester",
+                "postcode": "WN5 9AD",
+                "coordinates": {
+                    "longitude": "-2.650060",
+                    "latitude": "53.540030"
+                },
+                "delivery": {
+                    "delivery_start": "30",
+                    "delivery_end": "50",
+                    "delivery_fee": 2.99
+                }
+            },
+            // property be fetched from a seperate endpoint
+            "categories": [
+                {
+                    "id": 1,
+                    "name": "Central Heating",
+                    "sub_categories": [
+                        {
+                            "id": 1,
+                            "name": "Taps & Sinks"
+                        },
+                        {
+                            "id": 2,
+                            "name": "Electrical Heating"
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Radiators",
+                    "sub_categories": [
+                        {
+                            "id": 1,
+                            "name": "Horizontal Radiators"
+                        },
+                        {
+                            "id": 2,
+                            "name": "Column Radiators"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Wickes",
+            "imageURL": "screw_fix.png",
+            "distance": "3.6",
+            "unit_measure": "miles",
+            "type": "Hardware - Building Materials",
+            "rating": 3,
+            "has_rated": null,
+            "address": {
+                "line_1": "Gower Street",
+                "line_2": "Wigan",
+                "county": "Greater Manchester",
+                "postcode": "WN5 9AD",
+                "coordinates": {
+                    "longitude": "-2.650060",
+                    "latitude": "53.540030"
+                },
+                "delivery": {
+                    "delivery_start": "30",
+                    "delivery_end": "50",
+                    "delivery_fee": 2.99
+                }
+            },
+            // property be fetched from a seperate endpoint
+            "categories": [
+                {
+                    "id": 1,
+                    "name": "Central Heating",
+                    "sub_categories": [
+                        {
+                            "id": 1,
+                            "name": "Taps & Sinks"
+                        },
+                        {
+                            "id": 2,
+                            "name": "Electrical Heating"
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Radiators",
+                    "sub_categories": [
+                        {
+                            "id": 1,
+                            "name": "Horizontal Radiators"
+                        },
+                        {
+                            "id": 2,
+                            "name": "Column Radiators"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "name": "TradePoint Wigan",
+            "imageURL": "screw_fix.png",
+            "distance": "3.6",
+            "unit_measure": "miles",
+            "type": "Hardware - Building Materials",
+            "rating": 4,
+            "has_rated": null,
+            "address": {
+                "line_1": "Gower Street",
+                "line_2": "Wigan",
+                "county": "Greater Manchester",
+                "postcode": "WN5 9AD",
+                "coordinates": {
+                    "longitude": "-2.650060",
+                    "latitude": "53.540030"
+                },
+                "delivery": {
+                    "delivery_start": "30",
+                    "delivery_end": "50",
+                    "delivery_fee": 2.99
+                }
+            },
+            // property be fetched from a seperate endpoint
+            "categories": [
+                {
+                    "id": 1,
+                    "name": "Central Heating",
+                    "sub_categories": [
+                        {
+                            "id": 1,
+                            "name": "Taps & Sinks"
+                        },
+                        {
+                            "id": 2,
+                            "name": "Electrical Heating"
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Radiators",
+                    "sub_categories": [
+                        {
+                            "id": 1,
+                            "name": "Horizontal Radiators"
+                        },
+                        {
+                            "id": 2,
+                            "name": "Column Radiators"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "name": "Savoy Timber",
+            "imageURL": "screw_fix.png",
+            "distance": "3.6",
+            "unit_measure": "miles",
+            "type": "Hardware - Building Materials",
+            "rating": 4,
+            "has_rated": null,
+            "address": {
+                "line_1": "Gower Street",
+                "line_2": "Wigan",
+                "county": "Greater Manchester",
+                "postcode": "WN5 9AD",
+                "coordinates": {
+                    "longitude": "-2.650060",
+                    "latitude": "53.540030"
+                },
+                "delivery": {
+                    "delivery_start": "30",
+                    "delivery_end": "50",
+                    "delivery_fee": 2.99
+                }
+            },
+            // property be fetched from a seperate endpoint
+            "categories": [
+                {
+                    "id": 1,
+                    "name": "Central Heating",
+                    "sub_categories": [
+                        {
+                            "id": 1,
+                            "name": "Taps & Sinks"
+                        },
+                        {
+                            "id": 2,
+                            "name": "Electrical Heating"
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Radiators",
+                    "sub_categories": [
+                        {
+                            "id": 1,
+                            "name": "Horizontal Radiators"
+                        },
+                        {
+                            "id": 2,
+                            "name": "Column Radiators"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
