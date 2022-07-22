@@ -3,7 +3,6 @@ import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
 import TabNavigator from "./src/navigation";
 import { requestLocationPermissions } from './src/utils/location';
 import * as SplashScreen from 'expo-splash-screen';
-import * as Font from 'expo-font';
 import { SafeAreaProvider } from "react-native-safe-area-context";
 
 import { useFonts } from "./src/utils/hooks/useFonts";
