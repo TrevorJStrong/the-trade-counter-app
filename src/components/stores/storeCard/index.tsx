@@ -22,7 +22,7 @@ const StoreCard = ({ item, key, onPress }: CardProps)  => {
 
     return (
         <TouchableOpacity key={key}
-            onPress={() => navigation.navigate("Store", {
+            onPress={() => navigation.navigate("StoreCategories", {
                 store_categories: item.categories,
                 store_logo: item.imageURL
             })}

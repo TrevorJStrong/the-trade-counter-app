@@ -21,7 +21,7 @@ const Stores = ({ navigation }: Props) => {
                             key={item.id}
                             item={item}
                             onPress={() => {
-                                navigation.navigate("Store", { store_categories, store_logo })
+                                navigation.navigate("StoreCategories", { store_categories, store_logo })
                             }}
                         />
                     )

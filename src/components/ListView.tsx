@@ -2,15 +2,30 @@ import React from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { Entypo } from '@expo/vector-icons';
 import { colours } from "../../styleConstants";
+import { useNavigation } from "@react-navigation/native";
 
 interface ListViewProps {
     key: number;
-    name: string
+    name: string;
+    store_logo: string;
 }
 
-const ListView = ({ key, name }: ListViewProps) => {
+const ListView = ({ key, name, store_logo }: ListViewProps) => {
+
+    const navigation = useNavigation();
+
     return (
-        <TouchableOpacity key={key} style={styles.container}>
+        <TouchableOpacity 
+            key={key}  
+            style={styles.container}
+            onPress={() => 
+                navigation.navigate("StoreProducts", {
+                    id: key,
+                    store_logo: store_logo,
+                    category: name
+                })
+            }
+        >
             <Text style={{ fontFamily: 'montserrat' }}>{name}</Text>
             <View style={styles.chevronContainer}>
                 <Entypo name="chevron-small-right" size={20} color='#fff' />
@@ -26,7 +41,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
-        width: '90%',
+        width: '100%',
         alignSelf: 'center',
         marginBottom: 20,
         backgroundColor: colours.grey,

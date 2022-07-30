@@ -1,24 +1,20 @@
 import React from "react";
-import {
-  Platform,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import HomeScreen from "../screens/Home/HomeScreen";
 import BasketScreen from "../screens/Basket/BasketScreen";
 import ProfileScreen from "../screens/Profile/ProfileScreen";
 import TabBar from "./tabBar";
-import StoreScreen from "../screens/Home/StoreScreen";
+import StoreScreen from "../screens/Home/Store/CategoryListScreen";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Header from "../components/header";
-import { useNavigation, NavigatorScreenParams } from "@react-navigation/native";
+import { NavigatorScreenParams } from "@react-navigation/native";
 import { colours } from "../../styleConstants";
 import BackButton from "./backButton";
 import ChangeAddress from "../components/modals/ChangeAddress";
 import FilterSearch from "../components/modals/FilterSearch";
+import CurrentLocation from "./currentLocation";
+import ProductsListScreen from "../screens/Home/Store/ProductsListScreen";
+import { STORE_PRODUCTS_SCREEN } from "./routes";
 
 // type check the routes and params within the tabbar navigators
 export type RootStackParams = {
@@ -31,10 +27,11 @@ export type RootStackParams = {
 export type HomeStackParams = {
   // set screens to undefined if the route doesn't have any params
   Home: undefined;
-  Store: {
+  StoreCategories: {
     store_categories: string[];
     store_logo: string;
   };
+  StoreProducts: undefined;
 };
 
 export type BasketStackParams = {};
@@ -49,7 +46,6 @@ const BottomTabs = createBottomTabNavigator<RootStackParams>();
 const HomeStack = createNativeStackNavigator<HomeStackParams>();
 
 const HomeScreenStack = () => {
-  const navigation = useNavigation();
   return (
     <HomeStack.Navigator initialRouteName="Home">
       <HomeStack.Screen
@@ -62,7 +58,7 @@ const HomeScreenStack = () => {
         }}
       />
       <HomeStack.Screen
-        name="Store"
+        name="StoreCategories"
         component={StoreScreen}
         options={{
           headerShadowVisible: false,
@@ -71,16 +67,22 @@ const HomeScreenStack = () => {
           headerLeft: (props) => <BackButton {...props} />,
           headerRight: () => {
             return (
-              <View style={styles.flexCol}>
-                <Text style={{ fontFamily: "montserrat" }}>
-                  1 Greenside Close
-                </Text>
-                <TouchableOpacity
-                  onPress={() => navigation.navigate("ChangeAddress")}
-                >
-                  <Text style={styles.buttonText}>change</Text>
-                </TouchableOpacity>
-              </View>
+              <CurrentLocation />
+            );
+          },
+        }}
+      />
+      <HomeStack.Screen 
+        name={STORE_PRODUCTS_SCREEN}
+        component={ProductsListScreen}
+        options={{
+          headerShadowVisible: false,
+          headerShown: true,
+          title: null,
+          headerLeft: (props) => <BackButton {...props} />,
+          headerRight: () => {
+            return (
+              <CurrentLocation />
             );
           },
         }}
@@ -146,15 +148,3 @@ const TabNavigator = () => {
 };
 
 export default TabNavigator;
-
-const styles = StyleSheet.create({
-  flexCol: {
-    flexDirection: "column",
-    marginLeft: Platform.OS === "ios" ? 10 : 5,
-  },
-  buttonText: {
-    color: colours.secondary,
-    textAlign: "right",
-    fontFamily: "montserrat",
-  },
-});
