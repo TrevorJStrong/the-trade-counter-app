@@ -12,7 +12,7 @@ const NavigationIcon = ({ route, isFocused }: NavigationIconProps) => {
   const renderIcon = (route: string, isFocused: boolean) => {
     let height: number = 20;
     switch (route) {
-      case "HomeTab":
+      case "HomeStack":
         return (
           <Entypo
             name="home"
