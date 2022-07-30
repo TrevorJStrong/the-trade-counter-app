@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     button: {
         backgroundColor: colours.secondary,
         padding: 10,
-        borderRadius: 10
+        borderRadius: 15
     },
     text: {
         fontFamily: 'montserrat',
