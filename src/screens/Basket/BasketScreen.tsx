@@ -20,7 +20,7 @@ const BasketScreen = () => {
                 Looks like you haven't added any items to your basket yet.
             </Text>
             <TouchableOpacity 
-                onPress={() => navigation.navigate("HomeTab")}
+                onPress={() => navigation.navigate("HomeStack")}
                 style={styles.button}
             >
                 <Text style={styles.buttonText}>Shop Now</Text>
