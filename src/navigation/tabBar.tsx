@@ -3,7 +3,7 @@ import { View, Pressable, StyleSheet } from 'react-native';
 import { colours } from '../../styleConstants';
 import NavigationIcon from './navIcons';
 
-const TabBar = ({ state, descriptors, navigation}: any) =>{
+const TabBar = ({ state, descriptors, navigation}: any) => {
     return (
       <View style={styles.container}>
         {state.routes.map((route: any , index: number) => {
