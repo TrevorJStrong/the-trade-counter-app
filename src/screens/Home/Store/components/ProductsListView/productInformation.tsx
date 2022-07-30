@@ -13,13 +13,13 @@ export const ProductInformation = ({ name, price }) => {
 
 const styles = StyleSheet.create({
     productName: {
-        fontSize: fontSizes.small,
+        fontSize: fontSizes.xs,
         fontFamily: 'montserrat',
         color: colours.primaryText,
         paddingBottom: 5
     },
     productDescription: {
-        fontSize: fontSizes.xs,
+        fontSize: fontSizes.xxs,
         fontFamily: 'montserrat',
         color: colours.secondary,
         paddingBottom: 15

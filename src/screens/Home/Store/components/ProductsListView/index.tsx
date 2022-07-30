@@ -1,6 +1,6 @@
 import React from "react";
-import { View, StyleSheet } from 'react-native';
-import { colours } from "../../../../../../styleConstants";
+import { View, StyleSheet, Text } from 'react-native';
+import { colours, fontSizes } from "../../../../../../styleConstants";
 import { AddToBasketButton } from "../../../../../components/AddToBasketButton";
 import { ProductImage } from "./productImage";
 import { ProductInformation } from "./productInformation";
@@ -21,6 +21,14 @@ const Product = (item: any) => {
                 />
 
                 <AddToBasketButton />
+
+
+                {/* PUT IN SEPERATE COMPONENT */}
+                <View style={styles.moreInfoContainer}>
+                    <Text style={styles.moreInfoText}>
+                        More information
+                    </Text>
+                </View>        
 
             </View>
             
@@ -43,5 +51,14 @@ const styles = StyleSheet.create({
     },
     rightColumn: {
         flexDirection: 'column'
+    },
+    moreInfoContainer: {
+        paddingTop: 10,
+    },
+    moreInfoText: {
+        fontSize: fontSizes.xxxs,
+        fontFamily: 'montserrat',
+        color: colours.primaryText,
+        textAlign: 'center'
     }
 })
