@@ -13,6 +13,7 @@ export const marginSizes = {
 }
 
 export const fontSizes = {
+    xxxs: 12,
     xxs: 14,
     xs: 16,
     small: 18,
