@@ -8,7 +8,6 @@ import StoreScreen from "../screens/Home/Store/CategoryListScreen";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Header from "../components/header";
 import { NavigatorScreenParams } from "@react-navigation/native";
-import { colours } from "../../styleConstants";
 import BackButton from "./backButton";
 import ChangeAddress from "../components/modals/ChangeAddress";
 import FilterSearch from "../components/modals/FilterSearch";
@@ -17,7 +16,6 @@ import ProductsListScreen from "../screens/Home/Store/ProductsListScreen";
 import { STORE_PRODUCTS_SCREEN } from "./routes";
 import SearchBar from "../components/seachBar";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { View } from "react-native";
 
 // type check the routes and params within the tabbar navigators
 export type RootStackParams = {
@@ -96,7 +94,6 @@ const HomeScreenStack = () => {
         options={{
           headerShadowVisible: true,
           headerShown: true,
-          presentation: "modal",
           title: null,
           header: () => {
             return (
@@ -106,7 +103,8 @@ const HomeScreenStack = () => {
                     flexDirection: 'row', 
                     width: '100%', 
                     justifyContent: 'space-around', 
-                    alignSelf: 'center',                     
+                    alignSelf: 'center',
+                    backgroundColor: '#fff'                  
                   }}>
                   <BackButton />
                   <SearchBar />
