@@ -15,6 +15,9 @@ import FilterSearch from "../components/modals/FilterSearch";
 import CurrentLocation from "./currentLocation";
 import ProductsListScreen from "../screens/Home/Store/ProductsListScreen";
 import { STORE_PRODUCTS_SCREEN } from "./routes";
+import SearchBar from "../components/seachBar";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { View } from "react-native";
 
 // type check the routes and params within the tabbar navigators
 export type RootStackParams = {
@@ -91,10 +94,26 @@ const HomeScreenStack = () => {
         name="ChangeAddress"
         component={ChangeAddress}
         options={{
-          headerShadowVisible: false,
+          headerShadowVisible: true,
           headerShown: true,
           presentation: "modal",
-          headerTitle: "Change Address",
+          title: null,
+          header: () => {
+            return (
+              <>
+                {/* SEPERATE COMPONENT */}
+                <SafeAreaView style={{ 
+                    flexDirection: 'row', 
+                    width: '100%', 
+                    justifyContent: 'space-around', 
+                    alignSelf: 'center',                     
+                  }}>
+                  <BackButton />
+                  <SearchBar />
+                </SafeAreaView>
+              </>
+            )
+          }
         }}
       />
       <HomeStack.Screen
