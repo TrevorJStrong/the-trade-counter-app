@@ -1,12 +1,10 @@
 import React from "react";
-import { Image, ImageStyle, SafeAreaView, StyleSheet, Text, TextStyle, View, ViewStyle } from 'react-native';
-import { FontAwesome } from "@expo/vector-icons";
-import ListView from "../../../components/ListView";
-import { colours } from "../../../../styleConstants";
+import { StyleSheet, Text, TextStyle, View, ViewStyle } from 'react-native';
+import ListView from "../../components/store/listview";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import { HomeStackParams } from "../../../navigation";
+import { HomeStackParams } from "../../navigation";
 import StoreLogo from "./components/storeLogo";
-import { ScreenContainer } from "../../../styles";
+import { ScreenContainer } from "../../styles";
 
 // type check the Store screen
 // can do this by using the name of the route that this screen belongs to
@@ -32,19 +30,21 @@ function StoreScreen ({ route }: Props) {
 
             <View style={styles.categoryContainer}>
                 {store_categories.map((item: any ) => {
+                    console.log(item.id, 'get cat item id');
                     return (
-                        <>
+                        <React.Fragment key={item.id}>
                             <Text style={styles.categoryTitle}>{item.name}</Text>
                             {item.sub_categories.map((sub) => {
                                 return (
                                     <ListView 
-                                        key={sub.id}
+                                        // sub_id={sub?.id}
+                                        sub={sub}
                                         name={sub.name}
                                         store_logo={store_logo}
                                     />
                                 )
                             })}
-                        </>
+                        </React.Fragment>
                     )
                 })}
             </View>

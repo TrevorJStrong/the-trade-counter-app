@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
-import { colours, fontSizes } from "../../../../../../styleConstants";
+import { colours, fontSizes } from "../../../../../styleConstants";
 
 export const ProductInformation = ({ name, price }) => {
     return (

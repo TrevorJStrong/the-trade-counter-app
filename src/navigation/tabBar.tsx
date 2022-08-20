@@ -1,19 +1,25 @@
+import { useRoute } from '@react-navigation/native';
 import React from 'react';
 import { View, Pressable, StyleSheet } from 'react-native';
 import { colours } from '../../styleConstants';
 import NavigationIcon from './navIcons';
 
 const TabBar = ({ state, descriptors, navigation}: any) => {
+
+    const tabBarLabelCheck = (options: object, route) => {
+      if(options?.tabBarLabel !== undefined) {
+        return options.tabBarLabel
+      } else if(options.title !== undefined) {
+        return options.title
+      }
+      return route.name
+    }
+
     return (
       <View style={styles.container}>
         {state.routes.map((route: any , index: number) => {
           const { options } = descriptors[route.key];
-          const label =
-            options.tabBarLabel !== undefined
-              ? options.tabBarLabel
-              : options.title !== undefined
-              ? options.title
-              : route.name;
+          const label = tabBarLabelCheck(options, route);
   
           const isFocused = state.index === index;
   

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { View, StyleSheet, TouchableOpacity } from 'react-native';
 import StoreCategory from "./category";
 import StoreCardLogo from "./logo";
@@ -12,16 +12,15 @@ import { RootStackParams } from "../../../navigation";
 // do not use any type!
 interface CardProps {
     item: any
-    key: number
     onPress: (store_categories: string[], store_logo: string) => void;
 }
 
-const StoreCard = ({ item, key, onPress }: CardProps)  => {
+const StoreCard = ({ item, onPress }: CardProps)  => {
 
     const navigation = useNavigation<NativeStackNavigationProp<RootStackParams>>();
 
     return (
-        <TouchableOpacity key={key}
+        <TouchableOpacity key={item.id}
             onPress={() => navigation.navigate("StoreCategories", {
                 store_categories: item.categories,
                 store_logo: item.imageURL

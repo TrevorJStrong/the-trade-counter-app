@@ -1,26 +1,28 @@
 import React from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { Entypo } from '@expo/vector-icons';
-import { colours } from "../../styleConstants";
+import { colours } from "../../../../styleConstants";
 import { useNavigation } from "@react-navigation/native";
 
 interface ListViewProps {
-    key: number;
+    sub_id: number;
     name: string;
     store_logo: string;
 }
 
-const ListView = ({ key, name, store_logo }: ListViewProps) => {
+const ListView = ({ sub, name, store_logo }: ListViewProps) => {
 
     const navigation = useNavigation();
 
+    console.log(sub, 'sub obj');
+
     return (
         <TouchableOpacity 
-            key={key}  
+            key={sub.id}  
             style={styles.container}
             onPress={() => 
                 navigation.navigate("StoreProducts", {
-                    id: key,
+                    id: sub.id,
                     store_logo: store_logo,
                     category: name
                 })

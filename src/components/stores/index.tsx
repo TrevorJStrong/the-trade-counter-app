@@ -10,6 +10,7 @@ import StoreCard from "./storeCard";
 type Props = NativeStackScreenProps<RootStackParams, "Store">
 
 const Stores = ({ navigation }: Props) => {
+    console.log(stores, 'stores');
     return (
         <>
             <Text style={styles.title}>{data.stores.length} Open Stores</Text>
@@ -18,7 +19,6 @@ const Stores = ({ navigation }: Props) => {
                 renderItem={({item}: { item: { id: number }}) => {
                     return (
                         <StoreCard
-                            key={item.id}
                             item={item}
                             onPress={() => {
                                 navigation.navigate("StoreCategories", { store_categories, store_logo })
@@ -33,6 +33,7 @@ const Stores = ({ navigation }: Props) => {
                     paddingBottom: Platform.OS === 'ios' ? 50 : 100
                 }}
                 style={{ marginTop: 10 }}
+
             />
         </>
     );

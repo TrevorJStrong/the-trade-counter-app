@@ -1,17 +1,45 @@
-import React from 'react';
-import { TouchableOpacity, Text, StyleSheet } from 'react-native';
+import React, { useEffect } from 'react';
+import { TouchableOpacity, Text, StyleSheet, Alert, ActivityIndicator } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { colours } from '../../styleConstants';
+import { Product } from '../types/product';
 
-export const AddToBasketButton = () => {
+// needs refactoring 
+type IProps = {
+    product: Product;
+}
+
+export const AddToBasketButton = ({ product }: {product: IProps}) => {
+
+    const [loading, setLoading] = React.useState(false);
 
     // handle local storage
-    // const addToBasket = () => {
+    const addToBasket = async() => {
+        setLoading(true)
+        try {
+            const jsonValue = JSON.stringify(product);
+            await AsyncStorage.setItem('basket', jsonValue);
+            setLoading(false);
+        } catch (error) {
+            // put in global alert component??
+            Alert.alert('Error', 'Unable to add this product to your basket. Please try again later.')
+        }
+    }
 
-    // }
+    // useLoader hook in seperate file??
+    const LoadingSpinner = () => (
+        <ActivityIndicator 
+            color={'#fff'}
+            size={16}
+        />
+    )
 
     return (
         <TouchableOpacity style={styles.button}>
-            <Text style={styles.text}>Add To Basket</Text>
+            {!loading 
+                ? <Text style={styles.text}>Add To Basket</Text>
+                : <LoadingSpinner />
+            }
         </TouchableOpacity>
     );
 }

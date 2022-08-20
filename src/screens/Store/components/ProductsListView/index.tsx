@@ -1,11 +1,11 @@
 import React from "react";
 import { View, StyleSheet, Text } from 'react-native';
-import { colours, fontSizes } from "../../../../../../styleConstants";
-import { AddToBasketButton } from "../../../../../components/AddToBasketButton";
+import { colours, fontSizes } from "../../../../../styleConstants";
+import { AddToBasketButton } from "../../../../components/AddToBasketButton";
 import { ProductImage } from "./productImage";
 import { ProductInformation } from "./productInformation";
 
-const Product = (item: any) => {
+const SingleProduct = (item: any) => {
     return (
         <View style={styles.container}>
 
@@ -20,8 +20,7 @@ const Product = (item: any) => {
                     price={item.product.price}
                 />
 
-                <AddToBasketButton />
-
+                <AddToBasketButton product={item.product} />
 
                 {/* PUT IN SEPERATE COMPONENT */}
                 <View style={styles.moreInfoContainer}>
@@ -36,7 +35,7 @@ const Product = (item: any) => {
     );
 }
 
-export default Product;
+export default SingleProduct;
 
 const styles = StyleSheet.create({
     container: {

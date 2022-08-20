@@ -1,7 +1,7 @@
 import React from 'react';
 import { Image, StyleSheet } from 'react-native';
 import { FontAwesome } from "@expo/vector-icons";
-import { colours } from '../../../../../styleConstants';
+import { colours } from '../../../../styleConstants';
 
 const StoreLogo = ({ store_logo }) => {
     return (

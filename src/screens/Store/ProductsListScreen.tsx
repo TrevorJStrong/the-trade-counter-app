@@ -1,10 +1,10 @@
 import React from "react";
 import { FlatList, Image, ImageStyle, SafeAreaView, StyleSheet, Text, TextStyle, View, ViewStyle } from 'react-native';
 import { FontAwesome } from "@expo/vector-icons";
-import { ScreenContainer } from "../../../styles";
-import Product from "./components/ProductsListView";
+import { ScreenContainer } from "../../styles";
+import SingleProduct from "./components/ProductsListView";
 import StoreLogo from "./components/storeLogo";
-import { colours, fontSizes } from "../../../../styleConstants";
+import { colours, fontSizes } from "../../../styleConstants";
 
 const data = [
     {
@@ -35,7 +35,7 @@ const ProductsListScreen = ({ route }) => {
             <FlatList 
                 data={data}
                 renderItem={({ item }) =>
-                    <Product
+                    <SingleProduct
                         product={item}
                     />
                 }

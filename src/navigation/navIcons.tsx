@@ -2,6 +2,7 @@ import React from "react";
 import { View } from "react-native";
 import { Entypo, FontAwesome } from "@expo/vector-icons";
 import { colours } from "../../styleConstants";
+import { BasketIcon } from "../components/BasketIcon";
 
 interface NavigationIconProps {
   route: string;
@@ -22,11 +23,14 @@ const NavigationIcon = ({ route, isFocused }: NavigationIconProps) => {
         );
       case "BasketTab":
         return (
+          <>
           <Entypo
             name="shopping-cart"
             size={height}
             color={isFocused ? colours.secondary : "#fff"}
           />
+          {/* <BasketIcon /> */}
+          </>
         );
       case "ProfileTab":
         return (

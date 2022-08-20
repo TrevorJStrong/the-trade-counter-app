@@ -45,11 +45,11 @@
                     "name": "Radiators",
                     "sub_categories": [
                         {
-                            "id": 1,
+                            "id": 3,
                             "name": "Horizontal Radiators"
                         },
                         {
-                            "id": 2,
+                            "id": 4,
                             "name": "Column Radiators"
                         }
                     ]
@@ -101,11 +101,11 @@
                     "name": "Radiators",
                     "sub_categories": [
                         {
-                            "id": 1,
+                            "id": 3,
                             "name": "Horizontal Radiators"
                         },
                         {
-                            "id": 2,
+                            "id": 4,
                             "name": "Column Radiators"
                         }
                     ]

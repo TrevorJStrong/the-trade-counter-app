@@ -4,7 +4,7 @@ import { Image, StyleSheet } from "react-native";
 export const ProductImage = (image_url) => {
     return (
         <Image 
-            source={require('../../../../../../assets/products/tapProduct.png')}
+            source={require('../../../../../assets/products/tapProduct.png')}
             style={styles.productImage}
         />
     );
