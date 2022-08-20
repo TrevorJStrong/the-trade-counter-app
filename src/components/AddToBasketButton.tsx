@@ -13,6 +13,15 @@ export const AddToBasketButton = ({ product }: {product: IProps}) => {
 
     const [loading, setLoading] = React.useState(false);
 
+    useEffect(() => {
+        var test = 1;
+        if(test !== 1) {
+            console.log('test')
+        } else {
+            return false;
+        }
+    }, []);
+
     // handle local storage
     const addToBasket = async() => {
         setLoading(true)
