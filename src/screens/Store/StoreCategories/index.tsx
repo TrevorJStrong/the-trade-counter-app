@@ -1,17 +1,18 @@
 import React from "react";
 import { StyleSheet, Text, TextStyle, View, ViewStyle } from 'react-native';
-import ListView from "../../components/store/listview";
+import ListView from "../../../components/store/listview";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import { HomeStackParams } from "../../navigation";
-import StoreLogo from "./components/storeLogo";
-import { ScreenContainer } from "../../styles";
+import { HomeStackParams } from "../../../navigation";
+import StoreLogo from "../components/storeLogo";
+import { ScreenContainer } from "../../../styles";
+import styles from "./styles";
 
 // type check the Store screen
 // can do this by using the name of the route that this screen belongs to
 // as well as the params associated with this screen
 type Props = NativeStackScreenProps<HomeStackParams, "Store">
 
-type StyleProps = {
+export type StyleProps = {
     container: ViewStyle;
     // logo: ImageStyle;
     categoryTitle: TextStyle;
@@ -54,16 +55,3 @@ function StoreScreen ({ route }: Props) {
 };
 
 export default StoreScreen;
-
-const styles = StyleSheet.create<StyleProps>({
-    container: {
-        flex: 1
-    },
-    categoryTitle: {
-        fontFamily: 'montserrat',
-        marginBottom: 20
-    },
-    categoryContainer: {
-        marginTop: 10
-    }
-});
