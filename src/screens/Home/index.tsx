@@ -28,7 +28,8 @@ const HomeScreen = () => {
         requestLocationPermissions();
         clearStorage();
     }, []);
-
+    
+    // global function
     const clearStorage = async() => {
         try {
             await AsyncStorage.getAllKeys()
